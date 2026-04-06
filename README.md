@@ -58,7 +58,11 @@
 
 ```bash
 git clone https://github.com/Akryze/Task-Manager-Synapse.git
+```
+```bash
 cd Task-Manager-Synapse
+```
+```bash
 docker-compose up --build
 ```
 
