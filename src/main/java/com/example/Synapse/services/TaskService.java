@@ -37,8 +37,10 @@ public class TaskService {
                 .id(task.getTaskId())
                 .title(task.getTitle())
                 .description(task.getDescription())
-                .status(task.getStatus().name())
-                .username(task.getUser().getUsername())
+                // Проверяем статус на null
+                .status(task.getStatus() != null ? task.getStatus().name() : "UNKNOWN")
+                // Проверяем юзера на null
+                .username(task.getUser() != null ? task.getUser().getUsername() : "ANONYMOUS")
                 .createdAt(task.getCreatedAt() != null ? task.getCreatedAt().format(dateFormatter) : "")
                 .build();
     }
